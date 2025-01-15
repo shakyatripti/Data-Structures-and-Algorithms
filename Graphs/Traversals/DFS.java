@@ -1,7 +1,7 @@
 //Problem: https://www.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1
 
 
-//Better Solution
+//1st solution: Better Solution
 import java.util.*;
 import java.io.*;
 
@@ -77,7 +77,7 @@ class Main  {
     }
 }
 
-//Optimal Solution
+//2nd Solution: Optimal Solution
 import java.util.*;
 import java.io.*;
 
