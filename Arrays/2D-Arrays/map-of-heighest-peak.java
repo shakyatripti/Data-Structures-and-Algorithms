@@ -4,7 +4,7 @@ import java.util.*;
 import java.io.*;
 
 
-class MapOfHeighestPeak {
+class MapOfHighestPeak {
     public int[][] highestPeak(int[][] isWater) {
         int r = isWater.length, c = isWater[0].length;
         boolean[][] visited = new boolean[r][c];
@@ -58,7 +58,7 @@ class Main {
         int[][] isWater = new int[][] {
             {0,0,1},{1,0,0},{0,0,0}
         };
-        MapOfHeighestPeak peak = new MapOfHeighestPeak();
+        MapOfHighestPeak peak = new MapOfHighestPeak();
         int[][] ans = peak.highestPeak(isWater);
         for(int i=0; i<ans.length; i++) {
             for(int j=0; j<ans[0].length; j++) {
