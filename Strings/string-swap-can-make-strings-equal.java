@@ -49,3 +49,37 @@ class Main {
 }
 
 //Optimal Approach
+import java.util.*;
+import java.io.*;
+
+class StringsAreEqual {
+    public boolean areStringsEqual(String s1, String s2) {
+        int i=-1, j=-1, count=0;
+        for(int m=0; m<s1.length(); m++) {
+            if(s1.charAt(m)!=s2.charAt(m)) {
+                count++;
+                if(i==-1) {
+                    i=m;
+                } else if(j==-1) {
+                    j=m;
+                }
+            }
+        }
+        if(count==0 || (count==2 && s1.charAt(i)==s2.charAt(j) && s1.charAt(j)==s2.charAt(i))) {
+            return true;
+        }
+        return false;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        String s1 ="siyolsdcjthwsiplccjbuceoxmpjgrauocx";
+        String s2 = "siyolsdcjthwsiplccpbuceoxmjjgrauocx";
+        String s3 = "bank";
+        String s4 = "kant";
+        StringsAreEqual s = new StringsAreEqual();
+        System.out.println(s.areStringsEqual(s1,s2));
+        System.out.println(s.areStringsEqual(s3,s4));
+    }
+}
