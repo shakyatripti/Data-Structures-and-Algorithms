@@ -49,3 +49,56 @@ class Main {
         System.out.println(root.left.data);
     }
 }
+
+
+//Optimal solution
+import java.io.*;
+import java.util.*;
+
+class TreeNode {
+    int data;
+    TreeNode left;
+    TreeNode right;
+    TreeNode(int val) {
+        data = val;
+        left = right = null;
+    }
+}
+
+class ConstructBSTFromPreorder {
+    public TreeNode constructBST(int[] preorder) {
+        TreeNode root = new TreeNode(preorder[0]);
+        for(int i=1; i<preorder.length; i++) {
+            constructTree(root, preorder[i]);
+        }
+        return root;
+    }
+    
+    public void constructTree(TreeNode root, int val) {
+        if(root.data > val) {
+            if(root.left == null) {
+                root.left = new TreeNode(val);
+            } else {
+                constructTree(root.left, val);
+            }
+        }
+        if(root.data < val) {
+            if(root.right == null) {
+                root.right = new TreeNode(val);
+            } else {
+                constructTree(root.right, val);
+            }
+        }
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        int[] preorder = {9,5,1,11,10,12};
+        ConstructBSTFromPreorder tree = new ConstructBSTFromPreorder();
+        TreeNode root = tree.constructBST(preorder);
+        System.out.println(root.data);
+        System.out.println(root.right.data);
+        System.out.println(root.left.data);
+    }
+}
