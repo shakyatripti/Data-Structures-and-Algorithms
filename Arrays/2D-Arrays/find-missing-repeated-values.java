@@ -36,3 +36,43 @@ class Main {
         }
     }
 }
+
+
+//Optimal solution
+import java.io.*;
+import java.util.*;
+
+class MissingRepeatedValues {
+    public int[] findMissingRepeated(int[][] grid) {
+        int n = grid.length * grid.length;
+        int[] ans = new int[2];
+        int[] freq = new int[n+1];
+        Arrays.fill(freq, -1);
+        for(int i=0; i<grid.length; i++) {
+            for(int j=0; j<grid[i].length; j++) {
+                int num = grid[i][j];
+                freq[num]++;
+            }
+        }
+        for(int i=1; i<=n; i++) {
+            if(freq[i]==-1) {
+                ans[1] = i;
+            }
+            if(freq[i]==1) {
+                ans[0] = i;
+            }
+        }
+        return ans;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        int[][] grid = {{9,1,7},{8,9,2},{3,4,6}};
+        MissingRepeatedValues arr = new MissingRepeatedValues();
+        int[] ans = arr.findMissingRepeated(grid);
+        for(int i: ans) {
+            System.out.print(i + " ");
+        }
+    }
+}
