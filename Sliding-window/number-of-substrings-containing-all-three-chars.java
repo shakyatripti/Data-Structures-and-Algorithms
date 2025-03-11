@@ -44,3 +44,34 @@ class Main {
         System.out.println(str.countValidSubstrings("aaabc"));
     }
 }
+
+
+
+//Optimal Solution 
+import java.io.*;
+import java.util.*;
+
+class CountOfSubStrings {
+    public int countValidSubstrings(String word) {
+        int n=word.length(), ans = 0;
+        int[] freq = new int[3];
+        Arrays.fill(freq, -1);
+        for(int i=0; i<n; i++) {
+            char ch = word.charAt(i);
+            freq[ch-'a'] = i;
+            if(freq[0]!=-1 && freq[1]!=-1 && freq[2]!=-1) {
+                ans+=Math.min(freq[0], Math.min(freq[1], freq[2])) + 1;
+            }
+        }
+        return ans;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        CountOfSubStrings str = new CountOfSubStrings();
+        System.out.println(str.countValidSubstrings("abcabc"));
+        System.out.println(str.countValidSubstrings("aaabc"));
+        System.out.println(str.countValidSubstrings("aaabccacb"));
+    }
+}
