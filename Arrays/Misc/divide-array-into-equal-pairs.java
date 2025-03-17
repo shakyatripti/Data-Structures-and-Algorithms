@@ -33,3 +33,36 @@ class Main {
         System.out.println(arr.divideArray(nums2));
     }
 }
+
+
+
+
+//Optimal solution
+import java.io.*;
+import java.util.*;
+
+class DivideArrayIntoPairs {
+    public boolean divideArray(int[] nums) {
+        int[] freq = new int[501];
+        for(int i=0; i<nums.length; i++) {
+            freq[nums[i]]++;
+        }
+        for(int i: freq) {
+            if(i%2!=0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        DivideArrayIntoPairs arr = new DivideArrayIntoPairs();
+        int[] nums = {3,2,3,2,2,2};
+        System.out.println(arr.divideArray(nums));
+        
+        int[] nums2 = {1,2,2,5,6,5};
+        System.out.println(arr.divideArray(nums2));
+    }
+}
