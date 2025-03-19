@@ -1,7 +1,7 @@
 //Problem: https://www.geeksforgeeks.org/problems/rotation4723/1
 
 
-
+/*This solution is same as Find min in rotated sorted array*/
 import java.io.*;
 import java.util.*;
 

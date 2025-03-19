@@ -1,6 +1,7 @@
 //Problem: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/
 
 
+/*This solution is same as Find how many times array has been rotated*/
 import java.io.*;
 import java.util.*;
 
