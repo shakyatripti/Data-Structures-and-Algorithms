@@ -56,3 +56,66 @@ class Main {
         sp.display(ans2);
     }
 }
+
+
+
+//2nd solution: Better complexity using BS only.
+import java.io.*;
+import java.util.*;
+
+class SpellsAndPotions {
+    public int[] successfulPairs(int[] spells, int[] potions, long success) {
+        int[] ans = new int[spells.length];
+        Arrays.sort(potions);
+        for(int i=0; i<spells.length; i++) {
+            double spellPotion = (double) (1.0*success)/spells[i];
+            int minPotion = (int) Math.ceil(spellPotion);
+            ans[i] = index(minPotion, potions, success);
+        }
+        return ans;
+    }
+    
+    public int index(int p, int[] potions, long success) {
+        if(p > potions[potions.length-1]) {
+            return 0;
+        }
+        int l=0, r=potions.length-1;
+        while(l < r) {
+            int mid = l + (r-l)/2;
+            if(p > potions[mid]) {
+                l = mid + 1;
+            } else {
+                r = mid;
+            }
+        }
+        return potions.length-r;
+    }
+    
+    public void display(int[] ans) {
+        for(int i: ans) {
+            System.out.print(i + " ");
+        }
+        System.out.print("\n");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        int[] potions = {1,2,3,4,5};
+        int[] spells = {5,1,3};
+        SpellsAndPotions sp = new SpellsAndPotions();
+        int[] ans = sp.successfulPairs(spells,potions,7);
+        sp.display(ans);
+        
+        int[] potions2 = {1,2,3,4,5,6,7};
+        int[] spells2 = {1,2,3,4,5,6,7};
+        int[] ans2 = sp.successfulPairs(spells2, potions2, 25);
+        sp.display(ans2);
+        
+        int[] potions3 = {8,10,5};
+        int[] spells3 = {3,1,2};
+        int[] ans3 = sp.successfulPairs(spells3, potions3, 16);
+        sp.display(ans3);
+        
+    }
+}
