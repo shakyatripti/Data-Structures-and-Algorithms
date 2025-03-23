@@ -1,6 +1,17 @@
 //Problem: https://leetcode.com/problems/minimum-time-to-complete-trips/description/
 
 
+/*Problem statement: There is time arary which show time taken by vehicles. We need to find min time so that total trips completed
+    by vehicles should be more/equal than totalTrips. For example {1,2,3} are time taken A,B and C vehicles and totalTrips that needs to
+    be completed is 5. Let's suppose all vehicles started at 1 sec, so only A will complete 1 trip. In 2sec, A will complete 2 trips and B will
+    complete 1 trip. In 3sec, A will complete 3 trips, B will complete 1 trip(because to complete 2 trips it will require 4 secs), C will complete 1 trip.
+    So in total 5 trips are completed. In similar way check if time less than 3sec will work or not.
+
+    NOTE: Min time taking vehicle will be fastest and will take min time to complete trips. So our right value for BS will be min_time * total_trips.
+        Because in 5secs vehicle A will have already completed 5 trips.
+*/
+
+
 
 import java.io.*;
 import java.util.*;
