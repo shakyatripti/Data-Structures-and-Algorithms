@@ -2,6 +2,7 @@
 
 
 
+//Brute-force solution
 import java.io.*;
 import java.util.*;
 
@@ -46,5 +47,40 @@ class Main {
         SumOfSubsetXor sums2 = new SumOfSubsetXor();
         int[] nums2 = {3,4,5,6,7,8};
         System.out.println(sums2.subsetXorSum(nums2));
+    }
+}
+
+
+
+//Optimal solution
+import java.io.*;
+import java.util.*;
+
+class SumOfSubsetXor {
+    public int subsetXorSum(int[] nums) {
+        return findSubsets(nums, 0, 0);
+    }
+    
+    public int findSubsets(int[] nums, int i, int xor) {
+        if(i==nums.length) {
+            return xor;
+        }
+        int take = findSubsets(nums, i+1, xor^nums[i]);
+        int skip = findSubsets(nums, i+1, xor);
+        return take + skip;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        int[] nums = {1,3};
+        SumOfSubsetXor sums = new SumOfSubsetXor();
+        System.out.println(sums.subsetXorSum(nums));
+        
+        int[] nums1 = {5,1,6};
+        System.out.println(sums.subsetXorSum(nums1));
+        
+        int[] nums2 = {3,4,5,6,7,8};
+        System.out.println(sums.subsetXorSum(nums2));
     }
 }
