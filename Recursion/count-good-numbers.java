@@ -2,6 +2,11 @@
 
 
 
+/*Problem Statement: We need to count such numbers in which digits at even places are even and at odd places are primes(2,3,5 or 7).
+    In a given number of length n, number of even indices will be (n+1)/2 and number of odd indices will be n/2. For even indices 5 possibilities 
+    are there-0,2,4,6,8 and for odd indices 4 possibilties are there-2,3,5,7. Using binary exponentation we can find large powers.
+*/
+
 import java.io.*;
 import java.util.*;
 

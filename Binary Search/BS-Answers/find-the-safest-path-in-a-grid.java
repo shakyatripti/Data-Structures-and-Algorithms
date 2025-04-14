@@ -1,6 +1,14 @@
 //Problem: https://leetcode.com/problems/find-the-safest-path-in-a-grid/description/
 
 
+/*Problem Statement: We need to find such path with which we can reach (n-1, n-1) cell with maximum safeness factor.
+    Maximum safeness factor = Minimum Manhattan distance from thief. Basically find such path so that all 0's is as far as possible from 
+    nearest 1's. For example safenessFactor is 2, it means all the 0's is atleast 2 distance away from nearest 1's. So we need to find such
+    maximum safeness factor.
+*/
+
+
+
 import java.io.*;
 import java.util.*;
 

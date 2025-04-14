@@ -2,6 +2,12 @@
 
 
 
+/*Problem Statement: We need to minimise the maximum of the array using the operations mentioned. For example 6 is the maximum value
+    in array after operations, now we check if we can obtain 5 as max value after performing operations. Traverse array from left to 
+    right and then find buffer using operations.
+*/
+
+
 import java.io.*;
 import java.util.*;
 
