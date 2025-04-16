@@ -69,9 +69,9 @@ class ReverseStack {
         if(st.isEmpty()) {
             return;
         }
-        int top = st.pop();
-        reversed(st);
-        insertAtBottom(st, top);
+        int top = st.pop(); //Popped the first element from stack. Ex: 5 in [5,4,3,2,1]
+        reversed(st);//Trust : It is returning the reversed stack after popping 5 i:e [1,2,3,4]
+        insertAtBottom(st, top);// Just add the popped element i:e 5 at the end of the reversed stack[1,2,3,4].
     }
     
     public void insertAtBottom(Stack<Integer> st, int element) {

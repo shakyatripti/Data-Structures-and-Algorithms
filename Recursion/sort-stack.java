@@ -14,9 +14,9 @@ class SortStack {
         if(st.isEmpty()) {
             return;
         }
-        int top = st.pop();
-        sorting(st);
-        insertAtPosition(st, top);
+        int top = st.pop();//Popped the first element from stack. Ex: 5 from [5,-2,9,3,-7]
+        sorting(st);//Trust: It will return the sorted stack after popping 5 i:e [9,3,-2,-7]
+        insertAtPosition(st, top);// Just add the popped element i:e 5 at the required position in sorted stack [9,3,-2,-7]
     }
     
     public void insertAtPosition(Stack<Integer> st, int element) {
