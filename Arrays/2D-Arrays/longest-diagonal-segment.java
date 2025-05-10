@@ -1,4 +1,4 @@
-/*Problem: Given a matrix of integers, with each element containing either 0, 1 or 2, your task is to find 
+/*Problem: (Asked in Visa coding test) Given a matrix of integers, with each element containing either 0, 1 or 2, your task is to find 
     the longest diagonal segment which matches the following pattern: 1, 2, 0, 2, 0, 0 ... (where the first element
     is 1 and then 2 and 0 are repeating infinitely), and finishes at a matrix border. Return the length of this
     diagonal segment. The diagonal segement:
