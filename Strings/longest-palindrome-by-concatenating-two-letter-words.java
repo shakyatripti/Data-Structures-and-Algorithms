@@ -3,8 +3,8 @@
 
 
 /*Problem Statement: Given array of strings of length two, we need to find longest palindrome possible after concatenating the words from
-    the array. We first iterate the array to find if reverse of the word is there in the array not. If reversed word is present it sums up the lenght by 4.
-    At end, we need to find such word whose first and second letter is same, so that we can put that word in the middle of the palindrome.
+    the array. We first iterate the array to find if reverse of the word is there in the array or not. If reversed word is present it sums up the length by 4.
+    At the end, we need to find such word whose first and second letter is same, so that we can put that word in the middle of the palindrome.
 
     Ex: {lc, cl, gg, bb} , we first iterate "lc" and its reverse is "cl", but now in map we do not have any key as "cl", so we simply add and increase
     frequency of "lc". In second iteration we get "cl" and its reverse is "lc". In map also we have "lc" with frequency > 0. So current palindrome can be "cllc" with 
