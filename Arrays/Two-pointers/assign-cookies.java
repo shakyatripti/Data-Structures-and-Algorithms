@@ -1,5 +1,5 @@
 //Problem: https://leetcode.com/problems/assign-cookies/description/
-
+//NOTE: This problem is same as Maximum Matching of players with trainers problem (https://leetcode.com/problems/maximum-matching-of-players-with-trainers/description/)
 
 
 import java.io.*;
