@@ -76,3 +76,58 @@ class Main {
         arr.display(ans2);
     }
 }
+
+
+
+
+
+// Better Solution
+
+import java.io.*;
+import java.util.*;
+
+
+class FindResultantArray {
+    public List<String> removeAnagrams(String[] words) {
+        List<String> ans = new ArrayList<>();
+        String prev = "";
+        for(int i=0; i<words.length; i++) {
+            String curr = sorted(words[i]);
+            if(!curr.equals(prev)) {
+                prev = curr;
+                ans.add(words[i]);
+            }
+        }
+        return ans;
+    }
+
+    public String sorted(String word) {
+        char[] letters = word.toCharArray();
+        Arrays.sort(letters);
+        return new String(letters);
+    }
+    
+    public void display(List<String> ans) {
+        for(int i=0; i<ans.size(); i++) {
+            System.out.print(ans.get(i) + " ");
+        }
+        System.out.println();
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        FindResultantArray arr = new FindResultantArray();
+        String[] words = {"abba","baba","bbaa","cd","cd"};
+        List<String> ans = arr.removeAnagrams(words);
+        arr.display(ans);
+        
+        String[] words1 = {"a","b","c","d","e"};
+        List<String> ans1 = arr.removeAnagrams(words1);
+        arr.display(ans1);
+        
+        String[] words2 = {"z","z","z","gsw","wsg","gsw","krptu"};
+        List<String> ans2 = arr.removeAnagrams(words2);
+        arr.display(ans2);
+    }
+}
