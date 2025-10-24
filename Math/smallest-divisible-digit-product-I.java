@@ -1,4 +1,4 @@
-//Problem: https://leetcode.com/problems/smallest-divisible-digit-product-i/
+//Problem: https://leetcode.com/problems/smallest-divisible-digit-product-i/description/
 
 
 
