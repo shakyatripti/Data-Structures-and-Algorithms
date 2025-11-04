@@ -14,7 +14,7 @@ class KLongSubarraysI {
             int[] freq = new int[51];
             int sum=0, t=x;
             PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
-            if (b[1] == a[1]) {
+                if (b[1] == a[1]) {
                     return Integer.compare(b[0], a[0]);
                 }
                 return Integer.compare(b[1], a[1]);
