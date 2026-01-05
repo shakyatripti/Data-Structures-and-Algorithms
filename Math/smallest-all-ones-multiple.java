@@ -1,9 +1,9 @@
-//Problem: https://leetcode.com/problems/smallest-integer-divisible-by-k/description/
+//Problem: https://leetcode.com/problems/smallest-all-ones-multiple/description/
 
 
 
 
-/*This solution is same as smallest all ones multiple question*/
+/*This solution is same as smallest integer divisible by k question*/
 
 import java.io.*;
 import java.util.*;
