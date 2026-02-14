@@ -36,3 +36,29 @@ class Main {
         System.out.println(board.distinctIntegers(3));
     }
 }
+
+
+
+
+
+//Optimal solution
+
+import java.io.*;
+import java.util.*;
+
+class CountInBoard {
+    public int distinctIntegers(int n) {
+        if(n < 2) {
+            return 1;
+        }
+        return n-1;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        CountInBoard board = new CountInBoard();
+        System.out.println(board.distinctIntegers(5));
+        System.out.println(board.distinctIntegers(3));
+    }
+}
